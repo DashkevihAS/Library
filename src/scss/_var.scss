@@ -1,3 +1,14 @@
+$dark: #000000;
+$dark2: #181818;
+$light: #FFFFFF;
+
+$primary: #F87C09;
+$primaryLight: #FF922E;
+$primaryDark: #AEAAAA;
+
+$secondary: #EAEAEA;
+$secondaryDark: #6B6B6B;
+
 @mixin font($name, $weight) {
     @font-face {
         font: {

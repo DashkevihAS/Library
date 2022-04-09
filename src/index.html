@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Brother - Моя библиототека</title>
     <link rel="stylesheet" href="css/index.min.css">
-    <script src="js/index.min.js"></script>
+    <script src="js/index.min.js" defer></script>
 </head>
 
 <body>
 	<section class="library">
 		<header class="header library__header">
-			<div class="container">
-				<img src="img/logo.svg" alt="логотип big Brother">
+			<div class="container header__container">
+				<img class="header__logo" src="img/logo.svg" alt="логотип big Brother" width="61" height="40">
 
 				<button class="header__btn-add">Добавить книгу</button>
 
@@ -76,7 +76,7 @@
 			<h2 class="visually-hidden">Список книг</h2>
 			<ul class="library__list">
 				<li class="library__item">
-					<a href="/book" >
+					<a href="/book" data-navigo>
 						<article class="cart">
 							<div class="cart__wrapper">
 								<img class="cart__image" src="img/1984.jpg" alt="обложка 1984" >
@@ -104,7 +104,7 @@
 				</li>
 
 				<li class="library__item">
-					<a href="/book" >
+					<a href="/book" data-navigo>
 						<article class="cart">
 							<div class="cart__wrapper">
 								<img class="cart__image" src="img/empty.jpg" alt="обложка 1984" >
@@ -134,14 +134,21 @@
 		</div>
 
 		<footer class="footer">
-			<button class="footer__btn library__add-btn" aria-label="Добавить книгу"></button>
+			<button class="footer__btn library__btn-add" aria-label="Добавить книгу">
+				<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="22" cy="22" r="22" fill="currentColor"/>
+					<rect x="21.34" y="9.01993" width="0.44" height="25.96" fill="#242424" stroke="white" stroke-width="0.44"/>
+					<rect x="9.01999" y="21.7799" width="0.44" height="25.96" transform="rotate(-90 9.01999 21.7799)" fill="#242424" stroke="white" stroke-width="0.44"/>
+					</svg>
+					
+			</button>
 		</footer>
 
 	</section>
 	
-	<section class="book">
+	<section class="book hidden">
 		<header class="header book__header">
-			<div class="container">
+			<div class="container header__container">
 				<button class="header__btn header__btn_back" aria-label="Назад"></button>
 
 				<button class="header__btn header__btn_delete" aria-label="Удалить"></button>
@@ -179,10 +186,10 @@
 	</section>
 
 
-	<section class="add">
-	<h2 class="visually-hidden">для валидатора</h2>	
+	<section class="add hidden">
+	<h2 class="visually-hidden">Форма для добавления книги в базу данных</h2>	
 		<header class="header add__header">
-			<div class="container">
+			<div class="container header__container">
 				<button class="header__btn header__btn_back" aria-label="Назад"></button>
 
 				<button class="header__btn header__btn_search" aria-label="поиск"></button>

@@ -1,0 +1,42 @@
+.header {
+    padding: 8px 0;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        height: 40px;
+    }
+
+    &__btn-add {
+        display: none;
+    }
+
+    &__btn  {
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-color: transparent;
+        border: 0;
+        background-position: center right;
+        
+    }
+
+    &__btn_search {
+        background-image: url('../img/search.svg') ;
+    }
+    &__btn_back {
+        background-image: url('../img/back.svg');
+        background-size: 16px;
+        background-position: center left;
+
+    }
+    &__btn_delete {
+        background-image: url('../img/delete.svg');
+    }
+    
+}
