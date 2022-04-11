@@ -2,17 +2,45 @@
     padding: 8px 0;
     width: 100%;
 
+    @include tablet {
+        padding: 20px 0 15px;
+    }
+
+    @include desktop {
+        padding: 30px 0 25px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
     }
     &__logo {
         height: 40px;
+        margin-right: auto;  
+
+        @include laptop {
+            height: 66px;  
+        }
     }
 
     &__btn-add {
         display: none;
+
+        @include laptop {
+            display: block; 
+            width: 320px;
+            height: 50px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: $light;
+            background-color: $primary;
+            border-radius: 8px;
+            border: 0;
+            margin-right: 102px;
+        }
     }
 
     &__btn  {
@@ -22,21 +50,22 @@
         background-size: 24px;
         background-color: transparent;
         border: 0;
-        background-position: center right;
-        
-    }
+        background-position: right;
+        &_search {
+            background-image: url('../img/search.svg') ;
+        }
+        &_back {
+            background-image: url('../img/back.svg');
+            background-size: 16px;
+            background-position: center left;
 
-    &__btn_search {
-        background-image: url('../img/search.svg') ;
-    }
-    &__btn_back {
-        background-image: url('../img/back.svg');
-        background-size: 16px;
-        background-position: center left;
-
-    }
-    &__btn_delete {
-        background-image: url('../img/delete.svg');
+        }
+        &_delete {
+            background-image: url('../img/delete.svg');
+        }
     }
     
+}
+.hidden {
+    display: none;
 }

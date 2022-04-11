@@ -1,0 +1,57 @@
+.search {
+    $height: 40px;
+    $top: 8px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: -$top - $height;
+    transition: transform .3s ease-in-out;
+    &_active {
+        transform: translateY($top * 2 + $height);
+        @include laptop {
+            transform: translateY($top * 6 + $height);
+        }
+    }
+
+    @include tablet {
+        width: 462px;
+        $top: 0px;
+        top: -$top - $height;
+    }
+
+    @include laptop {
+        width: 580px;
+        $top: -14px;
+        top: $top - $height;
+    }
+
+    
+    &__form {
+        position: relative;
+    }
+    &__input {
+        width: 100%;
+        height: $height;
+        border-radius: 20px;
+        background-color: $light;
+        padding: 3px 40px 3px 15px;
+        outline: 1px solid transparent;
+        outline-offset: -1px;
+        border: 0;
+        &:focus {
+            outline-color: $secondaryDark;
+        }
+        
+    }
+    &__button {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $dark;
+        background-color: transparent;
+        border: 0;
+        width: 24px;
+        height: 24px;
+    }
+}
