@@ -9,7 +9,7 @@
     <script src="js/index.min.js" defer></script>
 </head>
 
-<body>
+<body class="body">
 	<section class="library">
 		<header class="header library__header">
 			<div class="container header__container">
@@ -190,7 +190,7 @@
 	<h2 class="visually-hidden">Форма для добавления книги в базу данных</h2>	
 		<header class="header add__header">
 			<div class="container header__container">
-				<button class="header__btn header__btn_back" aria-label="Назад"></button>
+				<button class="header__btn header__btn_back add__btn-back" aria-label="Назад"></button>
 
 				<button class="header__btn header__btn_search" aria-label="поиск"></button>
 			</div>
@@ -198,28 +198,28 @@
 
 		<form class="add__form">
 			<div class="container add__container">
-				<fieldset class="add__fieldset">
+				<fieldset class="add__fieldset ">
 					<legend class="add__title">Название и описание</legend>
 
 					<p class="add__step">шаг 1/3</p>
 
 					<label for="title" class="add__label">Название</label>
-					<input type="text" class="add__text" name="title" id="title">
+					<input type="text" class="add__text" name="title" id="title" required>
 
 					<label for="author" class="add__label">Автор</label>
-					<input type="text" class="add__text" name="author" id="author">
+					<input type="text" class="add__text" name="author" id="author" required>
 
 					<label for="description" class="add__label">Описание</label>
-					<textarea class="add__text add__text_area" name="description" id="description"></textarea>
+					<textarea class="add__text add__text_area" name="description" id="description" required></textarea>
 				</fieldset>
 	
-				<fieldset class="add__fieldset">
+				<fieldset class="add__fieldset hidden">
 					<legend class="add__title">Обложка</legend>
 
 					<p class="add__step">шаг 2/3</p>
 
 					<div class="upload">
-						<p class="add__subtitle"> Загрузить обложку</p>
+						<p class="upload__title"> Загрузить обложку</p>
 
 						<label  class="upload__label">
 							<img class="upload__preview" src="about:blank" alt="превью изображения">
@@ -229,17 +229,17 @@
 					</div>
 				</fieldset>
 	
-				<fieldset class="add__fieldset">
+				<fieldset class="add__fieldset hidden">
 					<legend class="add__title">Статус и оценка</legend>
 
 					<p class="add__step">шаг 3/3</p>
 
-					<fieldset class="status">
+					<fieldset class="status ">
 						<legend>Выберите статус книги</legend>
 
 						<ul class="status__list">
 							<li class="status__item">
-								<input class="status__radio" type="radio" name="label" id="wish" value="wish">
+								<input class="status__radio" type="radio" name="label" id="wish" value="wish" required>
 								<label class="status__label" for="wish">хочу прочитать</label>
 							</li>
 							<li class="status__item">
@@ -261,7 +261,7 @@
 						<legend>Поставьте оценку</legend>
 
 						<div class="star__list">
-							<input type="radio" class="star__radio" id="star-rating-5" name="rating" value="5">
+							<input type="radio" class="star__radio" id="star-rating-5" name="rating" value="5" required>
 							<label class="star__icon" for="star-rating-5"></label>
 							
 							<input type="radio" class="star__radio" id="star-rating-4" name="rating" value="4">
@@ -283,7 +283,7 @@
 	
 	
 				<div class="footer">
-					<button type="button" class="footer__btn add__btn" >Далее</button>
+					<button type="button" class="footer__btn add__btn">Далее</button>
 				</div>
 			</div>
 		</form>

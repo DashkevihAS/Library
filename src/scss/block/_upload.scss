@@ -1,0 +1,28 @@
+.upload {
+    max-width: 222px;
+    margin: 0 auto 15px;
+    &__title {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        margin-bottom: 15px;
+        
+    }
+    &__label {
+        display: block;
+        width: 222px;
+        height: 290px;
+        background-image: url('../img/upload.jpg');
+        background-size: cover;
+        cursor: pointer;
+        border-radius: 6px;
+
+    }
+    &__preview {
+        display: none;
+    }
+    &__file {
+        display: none;
+
+    }
+}
