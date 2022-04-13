@@ -8,6 +8,7 @@
     height: 74px;
     background-color: $dark;
     left: 0;
+    
 
     @media (max-height: 500px) {
         width: auto;
@@ -15,5 +16,8 @@
         justify-content: flex-end;
         padding: 20px;
         background-color: transparent;
+    }
+    @include laptop {
+        background-color: inherit;
     }
 }
