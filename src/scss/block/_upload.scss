@@ -16,6 +16,12 @@
         background-size: cover;
         cursor: pointer;
         border-radius: 6px;
+        &_active {
+            background-image: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
     }
     &__preview {
@@ -23,6 +29,5 @@
     }
     &__file {
         display: none;
-
     }
 }
