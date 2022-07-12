@@ -37,10 +37,10 @@
 	
 					<ul class="fields__list fields__list_sort">
 						<li class="fields__item">
-							<button class="fields__button">от большего</button>
+							<button class="fields__button" data-sort="down">от большего</button>
 						</li>
 						<li class="fields__item">
-							<button class="fields__button">от меньшего</button>
+							<button class="fields__button" data-sort="up">от меньшего</button>
 						</li>
 					</ul>
 				</div>
@@ -55,18 +55,7 @@
 					</button>
 	
 					<ul class="fields__list fields__list_filter">
-						<li class="fields__item">
-							<button class="fields__button">хочу прочитать</button>
-						</li>
-						<li class="fields__item">
-							<button class="fields__button">прочитал</button>
-						</li>
-						<li class="fields__item">
-							<button class="fields__button">читаю</button>
-						</li>
-						<li class="fields__item">
-							<button class="fields__button">не дочитал</button>
-						</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -75,61 +64,7 @@
 		<div class="container library__list-container">
 			<h2 class="visually-hidden">Список книг</h2>
 			<ul class="library__list">
-				<li class="library__item">
-					<a href="/book" data-navigo>
-						<article class="cart">
-							<div class="cart__wrapper">
-								<img class="cart__image" src="img/1984.jpg" alt="обложка 1984" >
 
-								<p class="cart__label">хочу прочитать</p>
-							</div>
-
-							<div class="cart__content">
-								<h3 class="cart__title">1984</h3>
-
-								<p class="cart__author">Джордж Оруэлл</p>
-
-								<p class="cart__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве правды и является...</p>
-
-								<div class="cart__rating">
-									<img class="cart__rating-star" src="img/star.svg" alt="рэйтинг 4 из 5">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-									<img class="cart__rating-star" src="img/star-o.svg" alt="">
-								</div>
-							</div>
-						</article>
-					</a>
-				</li>
-
-				<li class="library__item">
-					<a href="/book" data-navigo>
-						<article class="cart">
-							<div class="cart__wrapper">
-								<img class="cart__image" src="img/empty.jpg" alt="обложка 1984" >
-
-								<p class="cart__label">хочу прочитать</p>
-							</div>
-
-							<div class="cart__content">
-								<h3 class="cart__title">Гарри Поттер и Философский камень</h3>
-
-								<p class="cart__author">Джоан Роулинг</p>
-
-								<p class="cart__description">Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж. К. Роулинг. В нём...</p>
-
-								<div class="cart__rating">
-									<img class="cart__rating-star" src="img/star.svg" alt="рэйтинг 5 из 5">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-									<img class="cart__rating-star" src="img/star.svg" alt="">
-								</div>
-							</div>
-						</article>
-					</a>
-				</li>
 			</ul>
 		</div>
 
@@ -156,28 +91,7 @@
 		</header> 
 
 		<div class="container book__container">
-			<div class="book__wrapper">
-				<img class="book__image" src="img/1984.jpg" alt="обложка 1984">
-				<button class="book__label">Хочу прочитать</button>
-			</div>
-
-			<div class="book__content">
-				<h2 class="book__title">1984</h2>
-
-				<p class="book__author">Джордж Оруэлл</p>
-
-				<div class="book__rating">
-					<img class="book__rating-star" src="img/star.svg" alt="рэйтинг 4 из 5">
-					<img class="book__rating-star" src="img/star.svg" alt="">
-					<img class="book__rating-star" src="img/star.svg" alt="">
-					<img class="book__rating-star" src="img/star.svg" alt="">
-					<img class="book__rating-star" src="img/star-o.svg" alt="">
-				</div>
-
-				<h3 class="book__subtitle">Описание</h3>
-
-				<p class="book__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве правды и является членом внешней партии. Он не разделяет партийные лозунги и идеологию и в глубине души сильно сомневается в партии, окружающей действительности и вообще во всём том, в чём только можно сомневаться. Чтобы «выпустить пар» и не совершить какой-нибудь безрассудный поступок, ведёт дневник, в котором старается излагать все свои сомнения. На людях же притворяется приверженцем партийных идей. Однако опасается, что девушка Джулия, работающая в том же министерстве, шпионит за ним и хочет разоблачить его. В то же время полагает, что высокопоставленный сотрудник их министерства, член внутренней партии некий О’Брайен также не разделяет мнения партии и является подпольным революционером.</p>
-			</div>
+			
 		</div>
 
 		<footer class="footer book__footer">
@@ -224,7 +138,7 @@
 						<label  class="upload__label">
 							<img class="upload__preview" src="about:blank" alt="превью изображения">
 
-							<input class="upload__file" type="file" accept="image/*">
+							<input name='image' class="upload__file" type="file" accept="image/*">
 						</label>
 					</div>
 				</fieldset>
@@ -294,7 +208,7 @@
 		<div class="container search__container">
 			<form class=" search__form">
 				<label >
-					<input class="search__input" type="search">
+					<input class="search__input" type="search" name="searchInput">
 				</label>
 				<button class="search__button" >
 					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

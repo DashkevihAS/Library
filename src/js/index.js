@@ -4,6 +4,7 @@ import initFieldset from './modules/changeFieldset.js';
 import { controlField } from './modules/controlField.js';  
 import  './modules/upload.js';
 
+
 const fieldsBtnSort = document.querySelector('.fields__btn_sort');
 const fieldsListSort = document.querySelector('.fields__list_sort');
 const fieldsBtnFilter = document.querySelector('.fields__btn_filter');

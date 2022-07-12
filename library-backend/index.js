@@ -36,8 +36,12 @@ function drainJson(req) {
 }
 
 
-function isImage(data){
+function isImageBase64(data) {
   return (/^data:image/).test(data);
+}
+
+function isImageURL(data) {
+  return (/^image\//).test(data)
 }
 
 function dataURLtoFile(base64, id) {
@@ -50,7 +54,7 @@ function dataURLtoFile(base64, id) {
   writeFile(`./image/${id}.${ext}`, base64Image, {encoding: 'base64'}, (err) => {
     if (err) console.log(err);
   });
-  return `image/${id}.${ext}`;
+  return `image/${id}.${ext}`
 }
 
 
@@ -86,10 +90,10 @@ function makeBooksFromData(data, id) {
   // если есть ошибки, то бросаем объект ошибки с их списком и 422 статусом
   if (errors.length) throw new ApiError(422, {errors});
 
-  if (isImage(book.image)) {
+  if (isImageBase64(book.image)) {
     const url = dataURLtoFile(book.image, id);
     book.image = url;
-  } else {
+  } else if (!isImageURL(book.image)){
     book.image = 'image/notimage.jpg';
   }
 
@@ -129,7 +133,7 @@ function getBooksLabelList(label) {
 
 
 function createBook(data) {
-  const id = Math.random().toString().substring(2, 8) + Date.now().toString().substring(7);
+  const id = Math.random().toString().substring(2, 8) + Date.now().toString().substring(7)
   const newBook = makeBooksFromData(data, id);
   newBook.id = id;
   writeFileSync(DB, JSON.stringify([...getBooksList(), newBook]), {encoding: 'utf8'});

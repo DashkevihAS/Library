@@ -12,6 +12,7 @@
         }
 
     }
+  
     &__wrapper {
         width: 168px;
         margin: 0 auto;
@@ -22,8 +23,9 @@
 
         @include laptop {
             flex-shrink: 0; 
-            width: 249px;
+            flex-basis: 249px;
             margin-left: 55px;
+            margin: 0;
         }
         
         @include desktop {
